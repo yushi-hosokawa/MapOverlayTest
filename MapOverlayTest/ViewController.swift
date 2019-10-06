@@ -16,20 +16,30 @@ extension ViewController: MKMapViewDelegate {
 
 class ViewController: UIViewController {
 
-    var mapdata = MapData(filename: "MagicMountain")
     @IBOutlet weak var MapView: MKMapView!
     
     override func viewDidLoad()  {
       super.viewDidLoad()
         
-        let latDelta = mapdata.overlayTopLeftCoordinate.latitude - mapdata.overlayBottomRightCoordinate.latitude
+        let location:CLLocationCoordinate2D
+            = CLLocationCoordinate2DMake(35.709764,139.523009)
         
+        MapView.setCenter(location,animated:true)
+        
+        var region:MKCoordinateRegion = MapView.region
+        region.center = location
+        region.span.latitudeDelta = 0.005
+        region.span.longitudeDelta = 0.005
+        
+        MapView.setRegion(region,animated:true)
         
       //スパンをテレビのサイズと考えて、1つのコーナーから別のコーナーまで測定
-        let span = MKCoordinateSpan(latitudeDelta: fabs(latDelta), longitudeDelta: 0.0)
+            /*let span = MKCoordinateSpan(latitudeDelta: fabs(latDelta), longitudeDelta: 0.0)
         let region = MKCoordinateRegion(center: mapdata.midCoordinate, span: span)
         
       MapView.region = region
+ 
+ */
     }
 
 }

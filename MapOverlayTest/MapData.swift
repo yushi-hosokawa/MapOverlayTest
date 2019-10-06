@@ -40,33 +40,9 @@ class MapData {
   }
     
     
-    class func plist(_ plist: String) -> Any? {
-      let filePath = Bundle.main.path(forResource: plist, ofType: "plist")!
-      let data = FileManager.default.contents(atPath: filePath)!
-      return try! PropertyListSerialization.propertyList(from: data, options: [], format: nil)
-    }
+ 
     
-    
-    static func parseCoord(dict: [String: Any], fieldName: String) -> CLLocationCoordinate2D {
-      guard let coord = dict[fieldName] as? String else {
-        return CLLocationCoordinate2D()
-      }
-        let point = NSCoder.cgPoint(for: coord)
-      return CLLocationCoordinate2DMake(CLLocationDegrees(point.x), CLLocationDegrees(point.y))
-    }
-    
-    init(filename: String) {
-      guard let properties = MapData.plist(filename) as? [String : Any],
-        let boundaryPoints = properties["boundary"] as? [String] else { return }
-        
-      midCoordinate = MapData.parseCoord(dict: properties, fieldName: "midCoord")
-      overlayTopLeftCoordinate = MapData.parseCoord(dict: properties, fieldName: "overlayTopLeftCoord")
-      overlayTopRightCoordinate = MapData.parseCoord(dict: properties, fieldName: "overlayTopRightCoord")
-      overlayBottomLeftCoordinate = MapData.parseCoord(dict: properties, fieldName: "overlayBottomLeftCoord")
-        
-        let cgPoints = boundaryPoints.map { NSCoder.cgPoint(for: $0) }
-      boundary = cgPoints.map { CLLocationCoordinate2DMake(CLLocationDegrees($0.x), CLLocationDegrees($0.y)) }
-    }
+  
     
 }
 
