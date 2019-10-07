@@ -12,10 +12,14 @@ class MapData {
   var name: String?
   var boundary: [CLLocationCoordinate2D] = []
   
-  var midCoordinate = CLLocationCoordinate2D()
-  var overlayTopLeftCoordinate = CLLocationCoordinate2D()
-  var overlayTopRightCoordinate = CLLocationCoordinate2D()
-  var overlayBottomLeftCoordinate = CLLocationCoordinate2D()
+    var midCoordinate = CLLocationCoordinate2D(latitude: 35.709764, longitude: 139.523009)
+    
+  var overlayTopLeftCoordinate =  CLLocationCoordinate2D(latitude: 35.709764, longitude: 139.523009)
+    
+  var overlayTopRightCoordinate = CLLocationCoordinate2D(latitude: 35.709764, longitude: 139.523009)
+    
+  var overlayBottomLeftCoordinate = CLLocationCoordinate2D(latitude: 35.709764, longitude: 139.523009)
+    
  var overlayBottomRightCoordinate: CLLocationCoordinate2D {
     get {
       return CLLocationCoordinate2DMake(overlayBottomLeftCoordinate.latitude,

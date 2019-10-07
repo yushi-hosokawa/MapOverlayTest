@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         
         MapView.setRegion(region,animated:true)
         
+
       //スパンをテレビのサイズと考えて、1つのコーナーから別のコーナーまで測定
             /*let span = MKCoordinateSpan(latitudeDelta: fabs(latDelta), longitudeDelta: 0.0)
         let region = MKCoordinateRegion(center: mapdata.midCoordinate, span: span)

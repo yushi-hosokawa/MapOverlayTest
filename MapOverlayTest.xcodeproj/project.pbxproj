@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D1252E5F2347230900B53EA1 /* MapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1252E5E2347230900B53EA1 /* MapOverlay.swift */; };
 		D1252E612349863B00B53EA1 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1252E602349863B00B53EA1 /* MapData.swift */; };
+		D127F999234AF88B00A6AA8E /* MapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D127F998234AF88B00A6AA8E /* MapOverlayView.swift */; };
 		D12CD4952344347000E7EE23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD4942344347000E7EE23 /* AppDelegate.swift */; };
 		D12CD4972344347000E7EE23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD4962344347000E7EE23 /* SceneDelegate.swift */; };
 		D12CD4992344347000E7EE23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD4982344347000E7EE23 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		D1252E5E2347230900B53EA1 /* MapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlay.swift; sourceTree = "<group>"; };
 		D1252E602349863B00B53EA1 /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
+		D127F998234AF88B00A6AA8E /* MapOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlayView.swift; sourceTree = "<group>"; };
 		D12CD4912344347000E7EE23 /* MapOverlayTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapOverlayTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12CD4942344347000E7EE23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12CD4962344347000E7EE23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +64,13 @@
 			children = (
 				D12CD4942344347000E7EE23 /* AppDelegate.swift */,
 				D12CD4962344347000E7EE23 /* SceneDelegate.swift */,
-				D12CD4982344347000E7EE23 /* ViewController.swift */,
 				D12CD49A2344347000E7EE23 /* Main.storyboard */,
 				D12CD49D2344347200E7EE23 /* Assets.xcassets */,
 				D12CD49F2344347200E7EE23 /* LaunchScreen.storyboard */,
 				D12CD4A22344347200E7EE23 /* Info.plist */,
 				D1252E5E2347230900B53EA1 /* MapOverlay.swift */,
+				D127F998234AF88B00A6AA8E /* MapOverlayView.swift */,
+				D12CD4982344347000E7EE23 /* ViewController.swift */,
 				D1252E602349863B00B53EA1 /* MapData.swift */,
 			);
 			path = MapOverlayTest;
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D127F999234AF88B00A6AA8E /* MapOverlayView.swift in Sources */,
 				D12CD4992344347000E7EE23 /* ViewController.swift in Sources */,
 				D12CD4952344347000E7EE23 /* AppDelegate.swift in Sources */,
 				D12CD4972344347000E7EE23 /* SceneDelegate.swift in Sources */,
